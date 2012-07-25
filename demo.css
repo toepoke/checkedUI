@@ -1,0 +1,38 @@
+body {
+	margin: 5%;
+	font-size: 70% !important;
+}
+
+fieldset {
+	margin-bottom: 1em;
+}
+
+h1 {
+	font-size: x-large;
+}
+#ThemeRoller 
+{
+	float: right;
+	margin-top: -40px;
+}
+
+ul {
+	list-style: none;
+	margin-left: -1em;
+}
+
+th {
+	text-align: left;
+}
+
+.x-large {
+	width: 60%;
+}
+
+.small {
+	width: 30%;
+}
+
+.large {
+	width: 40%;
+}

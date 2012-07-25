@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/ui-darkness/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="demo.css" />
+</head>
+
+<body class="ui-widget">
+	<h1>Pretty demo </h1>
+	<div id="ThemeRoller"></div>
+	<p>
+		Just a quick demo of what checked-ui does, with a few common scenarios to make sure everything is hanging
+		together correctly.
+	</p>
+
+	<fieldset>
+		<legend>Checkbox Examples</legend>
+
+		<!-- tables .. urg ... didn't they die out last century ;-) -->
+		<table class="x-large">
+			<col class="large" />
+			<col class="small" />
+			<col class="small" />
+			<thead>
+				<tr>
+					<th>Scenario</th>
+					<th>Browser default</th>
+					<th>prettyCheck</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						Initially check is <strong>off</strong>
+					</td>
+					<td>
+						<label for="chkdef1">Check 1</label>
+						<input type="checkbox" id="chkdef1" />
+					</td>
+					<td>
+						<label for="chkUI1">Check 1</label>					
+						<input type="checkbox" class="prettyCheck" id="chkUI1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Initially check is <strong>on</strong>
+					</td>
+					<td>
+						<label for="chkdef2">Check 2</label>
+						<input type="checkbox" id="chkdef2" checked="checked" />
+					</td>
+					<td>
+						<label for="chkUI2">Check 2</label>					
+						<input type="checkbox" class="prettyCheck" id="chkUI2" checked="checked" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Initially check is <strong>on</strong> and <strong>disabled</strong>
+					</td>
+					<td>
+						<label for="chkdef3">Check 3</label>
+						<input type="checkbox" id="chkdef3" checked="checked" disabled="disabled" />
+					</td>
+					<td>
+						<label for="chkUI3">Check 3</label>					
+						<input type="checkbox" class="prettyCheck" id="chkUI3" checked="checked" disabled="disabled" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Initially check is <strong>off</strong> and <strong>disabled</strong>
+					</td>
+					<td>
+						<label for="chkdef4">Check 4</label>
+						<input type="checkbox" id="chkdef4" disabled="disabled" />
+					</td>
+					<td>
+						<label for="chkUI4">Check 4</label>					
+						<input type="checkbox" class="prettyCheck" id="chkUI4" disabled="disabled" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+
+	<fieldset>
+		<legend>Radiobutton Examples</legend>
+
+		<!-- tables .. urg ... didn't they die out last century ;-) -->
+		<table class="x-large">
+			<col class="large" />
+			<col class="small" />
+			<col class="small" />
+			<thead>
+				<tr>
+					<th>Scenario</th>
+					<th>Browser default</th>
+					<th>Pretty Rad</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						Initially none active
+					</td>
+					<td>
+						<label for="radDef2_Yes">Yes</label><input type="radio" name="radDef2" id="radDef2_Yes" value="Yes" />
+						<label for="radDef2_No">No</label>  <input type="radio" name="radDef2" id="radDef2_No" value="No" />
+					</td>
+					<td>
+						<label for="radUI2_Yes">Yes</label>
+						<input class="prettyRad" type="radio" name="chkUI2" id="radUI2_Yes" value="Yes" />
+						<label for="radUI2_No">No</label>  
+						<input class="prettyRad" type="radio" name="chkUI2" id="radUI2_No" value="No" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Disabled
+					</td>
+					<td>
+						<label for="radDef3_Yes">Yes</label><input type="radio" name="radDef3" id="radDef3_Yes" value="Yes" checked="checked" disabled="disabled" />
+						<label for="radDef3_No">No</label>  <input type="radio" name="radDef3" id="radDef3_No" value="No" disabled="disabled" />
+					</td>
+					<td>
+						<label for="radUI3_Yes">Yes</label>
+						<input class="prettyRad" type="radio" name="chkUI3" id="radUI3_Yes" value="Yes" checked="checked" disabled="disabled" />
+						<label for="radUI3_No">No</label>  
+						<input class="prettyRad" type="radio" name="chkUI3" id="radUI3_No" value="No" disabled="disabled" />
+					</td>
+				</tr>
+				<tr><td colspan="3"><hr /></td></tr>
+				<tr>					
+					<td>
+						Not grouped (no <strong>name</strong> attribute)
+					</td>
+					<td>
+						<label for="radDef1_Yes">Yes</label><input type="radio" id="radDef1_Yes" value="Yes" />
+						<label for="radDef1_No">No</label>  <input type="radio" id="radDef1_No" value="No" />
+					</td>
+					<td>
+						<label for="radUI1_Yes">Yes</label>
+						<input class="prettyRad" type="radio" id="radUI1_Yes" value="Yes" />
+						<label for="radUI1_No">No</label>  
+						<input class="prettyRad" type="radio" id="radUI1_No" value="No" />
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</fieldset>
+
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.js"></script>	
+	<script type="text/javascript" src="http://jqueryui.com/themeroller/themeswitchertool/"></script>
+	<script type="text/javascript" src="jquery.checked-ui.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var debugMode = false;
+			$("input:checkbox.prettyCheck").checkedUI({debug: debugMode});
+			$("input:radio.prettyRad").checkedUI({debug: debugMode});
+			$('#ThemeRoller').themeswitcher();
+		});
+	</script>
+</body>
+</html>
