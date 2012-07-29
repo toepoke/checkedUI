@@ -82,6 +82,25 @@
 
 		}; // updateUI
 
+		
+		function hideElement(chk) {
+			if (chk.prop("disabled")) {
+				// For disabled elements, just hide the underlying control, as the 
+				// z-index version doesn't look good.  Besides for disabled elements
+				// you can't select it with the mouse OR keyboard anyway ...
+				chk.addClass("ui-helper-hidden");
+			} else {
+				// We don't want to physically hide the checkbox/rad as we'll lose keyboard
+				// access (you won't be able to hit "space" to toggle a checkbox for instance)
+				// so we just disguise it by placing it directly under our pretty span
+				chk
+					.css("position", "relative")
+					.css("left", "-25px")
+					.css("top", "-2px")
+					.css("z-index", "-1000")
+				;
+			}
+		}; // hideElement
 
 
 		/// <summary>
@@ -94,12 +113,6 @@
 			opts.onClass = (isRadio ? config.onRadClass : config.onChkClass);
 			opts.offClass = (isRadio ? config.offRadClass : config.offChkClass);
 
-			if (!config.debug) {
-				// hide the original checkbox (this will only exist behind the scenes)
-				// ... this is configurable, purely to make future development easier
-				chk.addClass("ui-helper-hidden");
-			}
-
 			// Build up the HTML to mimic the control
 			var wrapper = getIconHtml(chk, opts);
 
@@ -111,6 +124,12 @@
 			opts._box = chk.prev();
 			// ... and a reference to the icon itself (i.e. the jQuery UI "ui-icon" span)
 			opts._icon = opts._box.find("span");
+
+			if (!config.debug) {
+				// hide the original checkbox (this will only exist behind the scenes)
+				// ... this is configurable, purely to make future development easier
+				hideElement(chk);
+			}
 
 			var changeSelector = chk;
 			if (isRadio) {
