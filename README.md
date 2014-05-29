@@ -6,7 +6,7 @@ checkedUI is a simple and unobtrusive method of prettying up checkboxes and radi
 
 Demo
 ----
-http://dl.dropbox.com/u/1055915/blog/checkedUI/demo.html
+http://embed.plnkr.co/9YIayf/preview
 
 Usage
 -----
